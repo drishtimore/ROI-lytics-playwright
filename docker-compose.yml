@@ -1,0 +1,19 @@
+services:
+  backend:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data:/app/data
+
+  frontend:
+    restart: unless-stopped
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
