@@ -78,3 +78,9 @@ npm run build
 - **Engagement Rate Capping**: Unrealistic engagement rates (>50%) are capped to protect downstream ML features.
 - **Brand Exclusions**: Brand/corporate handles are preserved in the database for auditing but excluded by default from influencer discovery (`/api/discover`), category rankings, and analytics.
 
+
+## Run with Docker
+
+    docker compose up --build
+
+App: http://localhost:3000 | API docs: http://localhost:8001/docs
